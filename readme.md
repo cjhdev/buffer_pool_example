@@ -1,8 +1,6 @@
-# Statically Allocated Fixed Size Buffer Pool in C++
+# Fixed Size Static Allocated Buffer Pool in C++
 
-An demonstration of a statically allocated fixed size buffer pool in C++11.
-
-The example uses templates for static memory allocation.
+A demonstration of a fixed size buffer pool in C++11 that avoids dynamic memory allocation.
 
 - See [buffer_pool.h](buffer_pool.h) for the buffer pool template
 - See [app.cpp](app.cpp) for the buffer pool template being exercised

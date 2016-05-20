@@ -23,11 +23,11 @@
 #define BUFFER_POOL_H
 
 /**
- * @defgroup buffer_pool Statically allocated fixed size buffer pool
+ * @defgroup buffer_pool Fixed size buffer pool without dynamic memory allocation
  *
- * An interview code example of a buffer pool implementation suitable
- * for systems where use of dynamic memory is undesirable.
- *
+ * A buffer pool suitable for systems where use of dynamic memory
+ * is not desireable.
+ * 
  * Requires C++11.
  * 
  * */
