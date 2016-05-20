@@ -27,7 +27,7 @@
 
 
 BufferPool<2, 50> inputPool;
-BufferPool<4, 100> outputPool;
+BufferPool<4, 20> outputPool;
 
 int
 main(void)
@@ -92,4 +92,13 @@ main(void)
     size_t wrote = b4->append((const uint8_t *)"hello world", strlen("hello world"));
 
     assert(wrote == strlen("hello world"));
+    assert(b4->length() == strlen("hello world"));
+    assert(memcmp(b4->data(), "hello world", b4->length()) == 0);
+
+    cout << "now try to write more than 20 bytes to b5" << endl;
+
+    uint8_t in[21];
+    wrote = b5->append(in, sizeof(in));
+    assert(wrote == 20);
+
 }
